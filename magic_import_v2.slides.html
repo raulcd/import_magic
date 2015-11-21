@@ -9,7 +9,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes" />
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-<title>magic_import slides</title>
+<title>magic_import_v2 slides</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -292,16 +292,66 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Command-Line-Time">Command Line Time<a class="anchor-link" href="#Command-Line-Time">&#182;</a></h1><p><img src="img/te_chie_la.png" alt="caption"></p>
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">math</span>
+<span class="n">math</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">math</span><span class="o">.</span><span class="n">pi</span><span class="o">/</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
 
 </div>
 </div>
-</div></section></section><section><section>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[1]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>1.0</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="kn">import</span> <span class="nn">collections</span>
+<span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[2]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>OrderedDict()</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -312,12 +362,50 @@ a.anchor-link {
 </div>
 </div>
 </div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># collections.py, math.py and my_method.py</span>
+<span class="k">def</span> <span class="nf">my_method</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">my_module</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">my_module</span><span class="o">.</span><span class="n">my_method</span><span class="p">()</span>
+<span class="n">my_module</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">math</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">collections</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">math</span><span class="o">.</span><span class="n">my_method</span><span class="p">()</span>
+<span class="n">math</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span><span class="o">.</span><span class="n">my_method</span><span class="p">()</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="n">module</span> <span class="s">&#39;collections&#39;</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s">&#39;my_method&#39;</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="n">collections</span><span class="o">.</span><span class="n">OrderedDict</span><span class="p">()</span>
+<span class="n">OrderedDict</span><span class="p">()</span>
+<span class="o">&gt;&gt;&gt;</span> 
+
+<span class="o">.</span>
+<span class="err">├──</span> <span class="n">collections</span><span class="o">.</span><span class="n">py</span>
+<span class="err">├──</span> <span class="n">math</span><span class="o">.</span><span class="n">py</span>
+<span class="err">├──</span> <span class="n">my_module</span><span class="o">.</span><span class="n">py</span>
+<span class="err">└──</span> <span class="n">__pycache__</span>
+    <span class="err">├──</span> <span class="n">math</span><span class="o">.</span><span class="n">cpython</span><span class="o">-</span><span class="mf">35.</span><span class="n">pyc</span>
+    <span class="err">└──</span> <span class="n">my_module</span><span class="o">.</span><span class="n">cpython</span><span class="o">-</span><span class="mf">35.</span><span class="n">pyc</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Command-Line-Time">Command Line Time<a class="anchor-link" href="#Command-Line-Time">&#182;</a></h1><p><img src="img/te_chie_la.png" alt="caption"></p>
+<h1 id="WAT!!!">WAT!!!<a class="anchor-link" href="#WAT!!!">&#182;</a></h1><p><img src="img/wat.gif" alt="caption"></p>
 
 </div>
 </div>
@@ -382,6 +470,16 @@ b&apos;\x16\r\r\n&apos;
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="sys.modules:-Caching-modules">sys.modules: Caching modules<a class="anchor-link" href="#sys.modules:-Caching-modules">&#182;</a></h1><p><img src="img/import_3.png" alt="caption"></p>
+
+</div>
+</div>
+</div></section></section><section><section>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Cache-All-The-Things!">Cache All The Things!<a class="anchor-link" href="#Cache-All-The-Things!">&#182;</a></h1><p><img src="img/cache.jpg" alt="caption"></p>
 
 </div>
 </div>
@@ -497,31 +595,15 @@ b&apos;\x16\r\r\n&apos;
 </div>
 </div>
 </div></section></section><section><section>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
 <div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython3"><pre>    <span class="nd">@classmethod</span>
-    <span class="k">def</span> <span class="nf">_path_hooks</span><span class="p">(</span><span class="n">cls</span><span class="p">,</span> <span class="n">path</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Search sequence of hooks for a finder for &#39;path&#39;.</span>
-<span class="sd">        If &#39;hooks&#39; is false then use sys.path_hooks.</span>
-<span class="sd">        &quot;&quot;&quot;</span>
-        <span class="k">if</span> <span class="n">sys</span><span class="o">.</span><span class="n">path_hooks</span> <span class="ow">is</span> <span class="ow">not</span> <span class="k">None</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">sys</span><span class="o">.</span><span class="n">path_hooks</span><span class="p">:</span>
-            <span class="n">_warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s">&#39;sys.path_hooks is empty&#39;</span><span class="p">,</span> <span class="ne">ImportWarning</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">hook</span> <span class="ow">in</span> <span class="n">sys</span><span class="o">.</span><span class="n">path_hooks</span><span class="p">:</span>
-            <span class="k">try</span><span class="p">:</span>
-                <span class="k">return</span> <span class="n">hook</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-            <span class="k">except</span> <span class="ne">ImportError</span><span class="p">:</span>
-                <span class="k">continue</span>
-        <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="k">None</span>
-</pre></div>
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="The-finder-searchs-a-finder">The finder searchs a finder<a class="anchor-link" href="#The-finder-searchs-a-finder">&#182;</a></h1><p><img src="img/infinite.gif" alt="caption"></p>
 
 </div>
 </div>
-</div>
-
 </div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
@@ -682,7 +764,21 @@ b&apos;\x16\r\r\n&apos;
 
 </div>
 </div>
-</div></section></section><section><section>
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="k">def</span> <span class="nf">_new_module</span><span class="p">(</span><span class="n">name</span><span class="p">):</span>
+    <span class="k">return</span> <span class="nb">type</span><span class="p">(</span><span class="n">sys</span><span class="p">)(</span><span class="n">name</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -711,6 +807,127 @@ b&apos;\x16\r\r\n&apos;
 </div>
 
 </div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c">#foo.py</span>
+<span class="kn">import</span> <span class="nn">bar</span>
+
+<span class="k">def</span> <span class="nf">name</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="n">bar</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># bar.py</span>
+<span class="kn">import</span> <span class="nn">foo</span>
+
+<span class="n">foo</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">name</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="err">$</span> <span class="n">python</span>
+<span class="n">Python</span> <span class="mf">3.5</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Sep</span> <span class="mi">20</span> <span class="mi">2015</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">25</span><span class="p">)</span> 
+<span class="p">[</span><span class="n">GCC</span> <span class="mf">5.2</span><span class="o">.</span><span class="mi">0</span><span class="p">]</span> <span class="n">on</span> <span class="n">linux</span>
+<span class="n">Type</span> <span class="s">&quot;help&quot;</span><span class="p">,</span> <span class="s">&quot;copyright&quot;</span><span class="p">,</span> <span class="s">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">foo</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">):</span>
+  <span class="n">File</span> <span class="s">&quot;&lt;stdin&gt;&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+  <span class="n">File</span> <span class="s">&quot;/home/raulcd/import_magic/_examples/import_reference_1/foo.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">1</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="kn">import</span> <span class="nn">bar</span>
+  <span class="n">File</span> <span class="s">&quot;/home/raulcd/import_magic/_examples/import_reference_1/bar.py&quot;</span><span class="p">,</span> <span class="n">line</span> <span class="mi">3</span><span class="p">,</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">module</span><span class="o">&gt;</span>
+    <span class="n">foo</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+<span class="ne">AttributeError</span><span class="p">:</span> <span class="n">module</span> <span class="s">&#39;foo&#39;</span> <span class="n">has</span> <span class="n">no</span> <span class="n">attribute</span> <span class="s">&#39;name&#39;</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># foo.py</span>
+<span class="kn">import</span> <span class="nn">bar</span>
+
+<span class="k">def</span> <span class="nf">name</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+
+<span class="n">bar</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="c"># bar.py</span>
+<span class="kn">import</span> <span class="nn">foo</span>
+
+<span class="n">foo</span><span class="o">.</span><span class="n">__name__</span>
+
+<span class="k">def</span> <span class="nf">name</span><span class="p">():</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">__name__</span><span class="p">)</span>
+    <span class="n">foo</span><span class="o">.</span><span class="n">name</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div><div class="fragment">
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span class="err">$</span> <span class="n">python</span>
+<span class="n">Python</span> <span class="mf">3.5</span><span class="o">.</span><span class="mi">0</span> <span class="p">(</span><span class="n">default</span><span class="p">,</span> <span class="n">Sep</span> <span class="mi">20</span> <span class="mi">2015</span><span class="p">,</span> <span class="mi">11</span><span class="p">:</span><span class="mi">28</span><span class="p">:</span><span class="mi">25</span><span class="p">)</span> 
+<span class="p">[</span><span class="n">GCC</span> <span class="mf">5.2</span><span class="o">.</span><span class="mi">0</span><span class="p">]</span> <span class="n">on</span> <span class="n">linux</span>
+<span class="n">Type</span> <span class="s">&quot;help&quot;</span><span class="p">,</span> <span class="s">&quot;copyright&quot;</span><span class="p">,</span> <span class="s">&quot;credits&quot;</span> <span class="ow">or</span> <span class="s">&quot;license&quot;</span> <span class="k">for</span> <span class="n">more</span> <span class="n">information</span><span class="o">.</span>
+<span class="o">&gt;&gt;&gt;</span> <span class="kn">import</span> <span class="nn">foo</span>
+<span class="n">bar</span>
+<span class="n">foo</span>
+<span class="o">&gt;&gt;&gt;</span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div></section></section><section><section>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="prompt input_prompt">
 </div>
@@ -1011,7 +1228,10 @@ b&apos;\x16\r\r\n&apos;
 <li>Cache of modules</li>
 </ul>
 </li>
-<li></li>
+<li>sys.path<ul>
+<li>Where the finders are going to take a look on</li>
+</ul>
+</li>
 </ul>
 
 </div>
