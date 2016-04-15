@@ -1,0 +1,168 @@
+raulcd@rhaegal - ~/import$ python
+Python 3.5.0 (default, Sep 20 2015, 11:28:25) 
+[GCC 5.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import math
+>>> import collections
+>>> math.my_method()
+Yey my_method
+>>> math.sin(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'math' has no attribute 'sin'
+>>> collections.my_method()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'collections' has no attribute 'my_method'
+>>> collections.OrderedDict()
+OrderedDict()
+>>> import sys
+>>> sys.path
+['', '/usr/lib/python35.zip', '/usr/lib/python3.5', '/usr/lib/python3.5/plat-linux', '/usr/lib/python3.5/lib-dynload', '/usr/lib/python3.5/site-packages']
+>>> sys.module
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'sys' has no attribute 'module'
+>>> sys.modules
+{'posixpath': <module 'posixpath' from '/usr/lib/python3.5/posixpath.py'>, 'atexit': <module 'atexit' (built-in)>, 'builtins': <module 'builtins' (built-in)>, 'heapq': <module 'heapq' from '/usr/lib/python3.5/heapq.py'>, '_weakrefset': <module '_weakrefset' from '/usr/lib/python3.5/_weakrefset.py'>, '_codecs': <module '_codecs' (built-in)>, 'stat': <module 'stat' from '/usr/lib/python3.5/stat.py'>, 'math': <module 'math' from '/home/raulcd/import/math.py'>, 'io': <module 'io' from '/usr/lib/python3.5/io.py'>, '_warnings': <module '_warnings' (built-in)>, 'collections': <module 'collections' from '/usr/lib/python3.5/collections/__init__.py'>, '_sitebuiltins': <module '_sitebuiltins' from '/usr/lib/python3.5/_sitebuiltins.py'>, '_heapq': <module '_heapq' from '/usr/lib/python3.5/lib-dynload/_heapq.cpython-35m-x86_64-linux-gnu.so'>, 'virtualenvwrapper': <module 'virtualenvwrapper'>, '_imp': <module '_imp' (built-in)>, '_collections_abc': <module '_collections_abc' from '/usr/lib/python3.5/_collections_abc.py'>, 'operator': <module 'operator' from '/usr/lib/python3.5/operator.py'>, 'sys': <module 'sys' (built-in)>, '_weakref': <module '_weakref' (built-in)>, '_locale': <module '_locale' (built-in)>, '_bootlocale': <module '_bootlocale' from '/usr/lib/python3.5/_bootlocale.py'>, '_frozen_importlib': <module '_frozen_importlib' (frozen)>, 'collections.abc': <module 'collections.abc' from '/usr/lib/python3.5/collections/abc.py'>, 'sre_constants': <module 'sre_constants' from '/usr/lib/python3.5/sre_constants.py'>, '_thread': <module '_thread' (built-in)>, 'zipimport': <module 'zipimport' (built-in)>, 'genericpath': <module 'genericpath' from '/usr/lib/python3.5/genericpath.py'>, '_operator': <module '_operator' (built-in)>, '_io': <module 'io' (built-in)>, 'types': <module 'types' from '/usr/lib/python3.5/types.py'>, '_sysconfigdata': <module '_sysconfigdata' from '/usr/lib/python3.5/_sysconfigdata.py'>, 'os': <module 'os' from '/usr/lib/python3.5/os.py'>, 'encodings.utf_8': <module 'encodings.utf_8' from '/usr/lib/python3.5/encodings/utf_8.py'>, 'os.path': <module 'posixpath' from '/usr/lib/python3.5/posixpath.py'>, 'itertools': <module 'itertools' (built-in)>, '_frozen_importlib_external': <module '_frozen_importlib_external' (frozen)>, '_sre': <module '_sre' (built-in)>, '_functools': <module '_functools' (built-in)>, 'encodings.latin_1': <module 'encodings.latin_1' from '/usr/lib/python3.5/encodings/latin_1.py'>, 'site': <module 'site' from '/usr/lib/python3.5/site.py'>, 'sre_compile': <module 'sre_compile' from '/usr/lib/python3.5/sre_compile.py'>, 're': <module 're' from '/usr/lib/python3.5/re.py'>, 'keyword': <module 'keyword' from '/usr/lib/python3.5/keyword.py'>, 'abc': <module 'abc' from '/usr/lib/python3.5/abc.py'>, 'functools': <module 'functools' from '/usr/lib/python3.5/functools.py'>, 'codecs': <module 'codecs' from '/usr/lib/python3.5/codecs.py'>, '__main__': <module '__main__' (built-in)>, 'rlcompleter': <module 'rlcompleter' from '/usr/lib/python3.5/rlcompleter.py'>, 'reprlib': <module 'reprlib' from '/usr/lib/python3.5/reprlib.py'>, 'encodings': <module 'encodings' from '/usr/lib/python3.5/encodings/__init__.py'>, 'errno': <module 'errno' (built-in)>, 'sre_parse': <module 'sre_parse' from '/usr/lib/python3.5/sre_parse.py'>, '_collections': <module '_collections' (built-in)>, 'weakref': <module 'weakref' from '/usr/lib/python3.5/weakref.py'>, '_stat': <module '_stat' (built-in)>, '_signal': <module '_signal' (built-in)>, 'copyreg': <module 'copyreg' from '/usr/lib/python3.5/copyreg.py'>, 'encodings.aliases': <module 'encodings.aliases' from '/usr/lib/python3.5/encodings/aliases.py'>, 'marshal': <module 'marshal' (built-in)>, 'sysconfig': <module 'sysconfig' from '/usr/lib/python3.5/sysconfig.py'>, 'posix': <module 'posix' (built-in)>, 'readline': <module 'readline' from '/usr/lib/python3.5/lib-dynload/readline.cpython-35m-x86_64-linux-gnu.so'>}
+>>> import importlib
+>>> importlib.reload('collections')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/usr/lib/python3.5/importlib/__init__.py", line 139, in reload
+    raise TypeError("reload() argument must be module")
+TypeError: reload() argument must be module
+>>> importlib.reload(collections)
+<module 'collections' from '/home/raulcd/import/collections.py'>
+>>> collections.my_method
+<function my_method at 0x7fe19cc1d8c8>
+>>> collections.my_method()
+Yey my_method
+>>> collections.OrderedDict()
+OrderedDict()
+>>> dir(collections)
+['AsyncIterable', 'AsyncIterator', 'Awaitable', 'ByteString', 'Callable', 'ChainMap', 'Container', 'Coroutine', 'Counter', 'Generator', 'Hashable', 'ItemsView', 'Iterable', 'Iterator', 'KeysView', 'Mapping', 'MappingView', 'MutableMapping', 'MutableSequence', 'MutableSet', 'OrderedDict', 'Sequence', 'Set', 'Sized', 'UserDict', 'UserList', 'UserString', 'ValuesView', '_Link', '_OrderedDictItemsView', '_OrderedDictKeysView', '_OrderedDictValuesView', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '_chain', '_class_template', '_collections_abc', '_count_elements', '_eq', '_field_template', '_heapq', '_iskeyword', '_itemgetter', '_proxy', '_recursive_repr', '_repeat', '_repr_template', '_starmap', '_sys', 'abc', 'defaultdict', 'deque', 'my_method', 'namedtuple']
+>>> sys.path
+['', '/usr/lib/python35.zip', '/usr/lib/python3.5', '/usr/lib/python3.5/plat-linux', '/usr/lib/python3.5/lib-dynload', '/usr/lib/python3.5/site-packages']
+>>> sys.path = sys.path[1:]
+>>> sys.path
+['/usr/lib/python35.zip', '/usr/lib/python3.5', '/usr/lib/python3.5/plat-linux', '/usr/lib/python3.5/lib-dynload', '/usr/lib/python3.5/site-packages']
+>>> importlib.reload(math)
+<module 'math' from '/usr/lib/python3.5/lib-dynload/math.cpython-35m-x86_64-linux-gnu.so'>
+>>> math.my_method()
+Yey my_method
+>>> math.sin(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'math' has no attribute 'sin'
+>>> math.cos(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'math' has no attribute 'cos'
+>>> math.
+math.__cached__         math.__loader__
+math.__class__(         math.__lt__(
+math.__delattr__(       math.__name__
+math.__dict__           math.__ne__(
+math.__dir__(           math.__new__(
+math.__doc__            math.__package__
+math.__eq__(            math.__reduce__(
+math.__file__           math.__reduce_ex__(
+math.__format__(        math.__repr__(
+math.__ge__(            math.__setattr__(
+math.__getattribute__(  math.__sizeof__(
+math.__gt__(            math.__spec__
+math.__hash__(          math.__str__(
+math.__init__(          math.__subclasshook__(
+math.__le__(            math.my_method(
+>>> sys.modules['math'] = importlib.reload(math)
+>>> math.sin(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'math' has no attribute 'sin'
+>>> import math
+>>> math.sin(1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: module 'math' has no attribute 'sin'
+>>> math
+<module 'math' from '/usr/lib/python3.5/lib-dynload/math.cpython-35m-x86_64-linux-gnu.so'>
+>>> math.
+math.__cached__         math.__loader__
+math.__class__(         math.__lt__(
+math.__delattr__(       math.__name__
+math.__dict__           math.__ne__(
+math.__dir__(           math.__new__(
+math.__doc__            math.__package__
+math.__eq__(            math.__reduce__(
+math.__file__           math.__reduce_ex__(
+math.__format__(        math.__repr__(
+math.__ge__(            math.__setattr__(
+math.__getattribute__(  math.__sizeof__(
+math.__gt__(            math.__spec__
+math.__hash__(          math.__str__(
+math.__init__(          math.__subclasshook__(
+math.__le__(            math.my_method(
+>>> math.my_method()
+Yey my_method
+>>>
+
+>>> sys.modules.pop('math')
+<module 'math' from '/usr/lib/python3.5/lib-dynload/math.cpython-35m-x86_64-linux-gnu.so'>
+>>> math.
+math.__cached__         math.__loader__
+math.__class__(         math.__lt__(
+math.__delattr__(       math.__name__
+math.__dict__           math.__ne__(
+math.__dir__(           math.__new__(
+math.__doc__            math.__package__
+math.__eq__(            math.__reduce__(
+math.__file__           math.__reduce_ex__(
+math.__format__(        math.__repr__(
+math.__ge__(            math.__setattr__(
+math.__getattribute__(  math.__sizeof__(
+math.__gt__(            math.__spec__
+math.__hash__(          math.__str__(
+math.__init__(          math.__subclasshook__(
+math.__le__(            math.my_method(
+>>> import math
+>>> math.
+math.__class__(         math.cosh(
+math.__delattr__(       math.degrees(
+math.__dict__           math.e
+math.__dir__(           math.erf(
+math.__doc__            math.erfc(
+math.__eq__(            math.exp(
+math.__file__           math.expm1(
+math.__format__(        math.fabs(
+math.__ge__(            math.factorial(
+math.__getattribute__(  math.floor(
+math.__gt__(            math.fmod(
+math.__hash__(          math.frexp(
+math.__init__(          math.fsum(
+math.__le__(            math.gamma(
+math.__loader__         math.gcd(
+math.__lt__(            math.hypot(
+math.__name__           math.inf
+math.__ne__(            math.isclose(
+math.__new__(           math.isfinite(
+math.__package__        math.isinf(
+math.__reduce__(        math.isnan(
+math.__reduce_ex__(     math.ldexp(
+math.__repr__(          math.lgamma(
+math.__setattr__(       math.log(
+math.__sizeof__(        math.log10(
+math.__spec__           math.log1p(
+math.__str__(           math.log2(
+math.__subclasshook__(  math.modf(
+math.acos(              math.nan
+math.acosh(             math.pi
+math.asin(              math.pow(
+math.asinh(             math.radians(
+math.atan(              math.sin(
+math.atan2(             math.sinh(
+math.atanh(             math.sqrt(
+math.ceil(              math.tan(
+math.copysign(          math.tanh(
+math.cos(               math.trunc(
+>>> math.sin(1)

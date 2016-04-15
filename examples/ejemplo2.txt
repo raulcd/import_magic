@@ -1,0 +1,141 @@
+ python
+Python 3.5.0 (default, Sep 20 2015, 11:28:25) 
+[GCC 5.2.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> sys.path_
+sys.path_hooks           sys.path_importer_cache  
+>>> sys.path_
+sys.path_hooks           sys.path_importer_cache  
+>>> sys.path_hooks
+[<class 'zipimport.zipimporter'>, <function FileFinder.path_hook.<locals>.path_hook_for_FileFinder at 0x7f549eca1950>]
+>>> sys.meta_path
+[<class '_frozen_importlib.BuiltinImporter'>, <class '_frozen_importlib.FrozenImporter'>, <class '_frozen_importlib_external.PathFinder'>]
+>>> sys.modules
+{'keyword': <module 'keyword' from '/usr/lib/python3.5/keyword.py'>, 'os': <module 'os' from '/usr/lib/python3.5/os.py'>, 'heapq': <module 'heapq' from '/usr/lib/python3.5/heapq.py'>, 'sre_constants': <module 'sre_constants' from '/usr/lib/python3.5/sre_constants.py'>, 'functools': <module 'functools' from '/usr/lib/python3.5/functools.py'>, 'itertools': <module 'itertools' (built-in)>, '__main__': <module '__main__' (built-in)>, '_bootlocale': <module '_bootlocale' from '/usr/lib/python3.5/_bootlocale.py'>, '_signal': <module '_signal' (built-in)>, 're': <module 're' from '/usr/lib/python3.5/re.py'>, '_warnings': <module '_warnings' (built-in)>, 'sysconfig': <module 'sysconfig' from '/usr/lib/python3.5/sysconfig.py'>, 'weakref': <module 'weakref' from '/usr/lib/python3.5/weakref.py'>, 'stat': <module 'stat' from '/usr/lib/python3.5/stat.py'>, '_heapq': <module '_heapq' from '/usr/lib/python3.5/lib-dynload/_heapq.cpython-35m-x86_64-linux-gnu.so'>, '_functools': <module '_functools' (built-in)>, 'posix': <module 'posix' (built-in)>, 'sre_compile': <module 'sre_compile' from '/usr/lib/python3.5/sre_compile.py'>, '_sitebuiltins': <module '_sitebuiltins' from '/usr/lib/python3.5/_sitebuiltins.py'>, 'zipimport': <module 'zipimport' (built-in)>, 'copyreg': <module 'copyreg' from '/usr/lib/python3.5/copyreg.py'>, 'marshal': <module 'marshal' (built-in)>, 'encodings.latin_1': <module 'encodings.latin_1' from '/usr/lib/python3.5/encodings/latin_1.py'>, 'encodings.aliases': <module 'encodings.aliases' from '/usr/lib/python3.5/encodings/aliases.py'>, '_collections_abc': <module '_collections_abc' from '/usr/lib/python3.5/_collections_abc.py'>, 'encodings.utf_8': <module 'encodings.utf_8' from '/usr/lib/python3.5/encodings/utf_8.py'>, '_thread': <module '_thread' (built-in)>, 'posixpath': <module 'posixpath' from '/usr/lib/python3.5/posixpath.py'>, '_stat': <module '_stat' (built-in)>, '_frozen_importlib': <module '_frozen_importlib' (frozen)>, 'types': <module 'types' from '/usr/lib/python3.5/types.py'>, '_weakref': <module '_weakref' (built-in)>, '_codecs': <module '_codecs' (built-in)>, 'builtins': <module 'builtins' (built-in)>, 'reprlib': <module 'reprlib' from '/usr/lib/python3.5/reprlib.py'>, '_sysconfigdata': <module '_sysconfigdata' from '/usr/lib/python3.5/_sysconfigdata.py'>, '_io': <module 'io' (built-in)>, '_sre': <module '_sre' (built-in)>, '_imp': <module '_imp' (built-in)>, '_frozen_importlib_external': <module '_frozen_importlib_external' (frozen)>, 'codecs': <module 'codecs' from '/usr/lib/python3.5/codecs.py'>, '_weakrefset': <module '_weakrefset' from '/usr/lib/python3.5/_weakrefset.py'>, 'sre_parse': <module 'sre_parse' from '/usr/lib/python3.5/sre_parse.py'>, 'encodings': <module 'encodings' from '/usr/lib/python3.5/encodings/__init__.py'>, 'collections': <module 'collections' from '/usr/lib/python3.5/collections/__init__.py'>, 'errno': <module 'errno' (built-in)>, 'site': <module 'site' from '/usr/lib/python3.5/site.py'>, '_collections': <module '_collections' (built-in)>, 'readline': <module 'readline' from '/usr/lib/python3.5/lib-dynload/readline.cpython-35m-x86_64-linux-gnu.so'>, 'genericpath': <module 'genericpath' from '/usr/lib/python3.5/genericpath.py'>, 'sys': <module 'sys' (built-in)>, 'collections.abc': <module 'collections.abc' from '/usr/lib/python3.5/collections/abc.py'>, '_locale': <module '_locale' (built-in)>, '_operator': <module '_operator' (built-in)>, 'atexit': <module 'atexit' (built-in)>, 'io': <module 'io' from '/usr/lib/python3.5/io.py'>, 'os.path': <module 'posixpath' from '/usr/lib/python3.5/posixpath.py'>, 'operator': <module 'operator' from '/usr/lib/python3.5/operator.py'>, 'rlcompleter': <module 'rlcompleter' from '/usr/lib/python3.5/rlcompleter.py'>, 'abc': <module 'abc' from '/usr/lib/python3.5/abc.py'>, 'virtualenvwrapper': <module 'virtualenvwrapper'>}
+>>> sys.path
+['', '/usr/lib/python35.zip', '/usr/lib/python3.5', '/usr/lib/python3.5/plat-linux', '/usr/lib/python3.5/lib-dynload', '/usr/lib/python3.5/site-packages']
+>>> dir(sys.path_hooks[1])
+['__annotations__', '__call__', '__class__', '__closure__', '__code__', '__defaults__', '__delattr__', '__dict__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__get__', '__getattribute__', '__globals__', '__gt__', '__hash__', '__init__', '__kwdefaults__', '__le__', '__lt__', '__module__', '__name__', '__ne__', '__new__', '__qualname__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__']
+>>> sys.path_hooks[1]()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: path_hook_for_FileFinder() missing 1 required positional argument: 'path'
+>>> sys.path_hooks[1]('./collections.py')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<frozen importlib._bootstrap_external>", line 1301, in path_hook_for_FileFinder
+ImportError: only directories are supported
+>>> sys.path_hooks[1]('/home/raulcd/import/collections.py')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<frozen importlib._bootstrap_external>", line 1301, in path_hook_for_FileFinder
+ImportError: only directories are supported
+>>> sys.path_hooks[1]('/home/raulcd/import/')
+FileFinder('/home/raulcd/import/')
+>>> finder = sys.path_hooks[1]('/home/raulcd/import/')
+>>> finder.
+finder.__class__(           finder.__lt__(              finder._get_spec(
+finder.__delattr__(         finder.__module__           finder._loaders
+finder.__dict__             finder.__ne__(              finder._path_cache
+finder.__dir__(             finder.__new__(             finder._path_mtime
+finder.__doc__              finder.__reduce__(          finder._relaxed_path_cache
+finder.__eq__(              finder.__reduce_ex__(       finder.find_loader(
+finder.__format__(          finder.__repr__(            finder.find_module(
+finder.__ge__(              finder.__setattr__(         finder.find_spec(
+finder.__getattribute__(    finder.__sizeof__(          finder.invalidate_caches(
+finder.__gt__(              finder.__str__(             finder.path
+finder.__hash__(            finder.__subclasshook__(    finder.path_hook(
+finder.__init__(            finder.__weakref__          
+finder.__le__(              finder._fill_cache(         
+>>> finder.find_spec(collections)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'collections' is not defined
+>>> finder.find_spec('collections')
+ModuleSpec(name='collections', loader=<_frozen_importlib_external.SourceFileLoader object at 0x7f549e8df748>, origin='/home/raulcd/import/collections.py')
+>>> finder.find_spec('collections')
+ModuleSpec(name='collections', loader=<_frozen_importlib_external.ExtensionFileLoader object at 0x7f549e8df6d8>, origin='/home/raulcd/import/collections.so')
+>>> sys.meta_path
+[<class '_frozen_importlib.BuiltinImporter'>, <class '_frozen_importlib.FrozenImporter'>, <class '_frozen_importlib_external.PathFinder'>]
+>>> spec = finder.find_spec('collections')
+>>> spec.
+spec.__class__(                  spec.__le__(                     spec.__weakref__
+spec.__delattr__(                spec.__lt__(                     spec._cached
+spec.__dict__                    spec.__module__                  spec._set_fileattr
+spec.__dir__(                    spec.__ne__(                     spec.cached
+spec.__doc__                     spec.__new__(                    spec.has_location
+spec.__eq__(                     spec.__reduce__(                 spec.loader
+spec.__format__(                 spec.__reduce_ex__(              spec.loader_state
+spec.__ge__(                     spec.__repr__(                   spec.name
+spec.__getattribute__(           spec.__setattr__(                spec.origin
+spec.__gt__(                     spec.__sizeof__(                 spec.parent
+spec.__hash__                    spec.__str__(                    spec.submodule_search_locations
+spec.__init__(                   spec.__subclasshook__(           
+>>> spec.loader
+spec.loader        spec.loader_state  
+>>> spec.loader.
+spec.loader.__class__(         spec.loader.__le__(            spec.loader.__weakref__
+spec.loader.__delattr__(       spec.loader.__lt__(            spec.loader.create_module(
+spec.loader.__dict__           spec.loader.__module__         spec.loader.exec_module(
+spec.loader.__dir__(           spec.loader.__ne__(            spec.loader.get_code(
+spec.loader.__doc__            spec.loader.__new__(           spec.loader.get_data(
+spec.loader.__eq__(            spec.loader.__reduce__(        spec.loader.get_filename(
+spec.loader.__format__(        spec.loader.__reduce_ex__(     spec.loader.get_source(
+spec.loader.__ge__(            spec.loader.__repr__(          spec.loader.is_package(
+spec.loader.__getattribute__(  spec.loader.__setattr__(       spec.loader.load_module(
+spec.loader.__gt__(            spec.loader.__sizeof__(        spec.loader.name
+spec.loader.__hash__(          spec.loader.__str__(           spec.loader.path
+spec.loader.__init__(          spec.loader.__subclasshook__(  
+>>> spec.loader.load_module('collections')
+<module 'collections' from '/home/raulcd/import/collections.so'>
+>>> dir(spec.loader.load_module('collections'))
+['AsyncIterable', 'AsyncIterator', 'Awaitable', 'ByteString', 'Callable', 'ChainMap', 'Container', 'Coroutine', 'Counter', 'Generator', 'Hashable', 'ItemsView', 'Iterable', 'Iterator', 'KeysView', 'Mapping', 'MappingView', 'MutableMapping', 'MutableSequence', 'MutableSet', 'OrderedDict', 'Sequence', 'Set', 'Sized', 'UserDict', 'UserList', 'UserString', 'ValuesView', '_Link', '_OrderedDictItemsView', '_OrderedDictKeysView', '_OrderedDictValuesView', '__all__', '__builtins__', '__cached__', '__doc__', '__file__', '__loader__', '__name__', '__package__', '__path__', '__spec__', '_chain', '_class_template', '_collections_abc', '_count_elements', '_eq', '_field_template', '_heapq', '_iskeyword', '_itemgetter', '_proxy', '_recursive_repr', '_repeat', '_repr_template', '_starmap', '_sys', 'abc', 'defaultdict', 'deque', 'namedtuple']
+>>> finder.find_spec('math')
+ModuleSpec(name='math', loader=<_frozen_importlib_external.ExtensionFileLoader object at 0x7f549e8df710>, origin='/home/raulcd/import/math.so')
+>>> spec = finder.find_spec('math')
+>>> spec
+ModuleSpec(name='math', loader=<_frozen_importlib_external.ExtensionFileLoader object at 0x7f549e8df898>, origin='/home/raulcd/import/math.so')
+>>> spec.loader.load_module('math')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "<frozen importlib._bootstrap_external>", line 385, in _check_name_wrapper
+  File "<frozen importlib._bootstrap_external>", line 806, in load_module
+  File "<frozen importlib._bootstrap_external>", line 665, in load_module
+  File "<frozen importlib._bootstrap>", line 268, in _load_module_shim
+  File "<frozen importlib._bootstrap>", line 693, in _load
+  File "<frozen importlib._bootstrap>", line 666, in _load_unlocked
+  File "<frozen importlib._bootstrap>", line 577, in module_from_spec
+  File "<frozen importlib._bootstrap_external>", line 903, in create_module
+  File "<frozen importlib._bootstrap>", line 222, in _call_with_frames_removed
+ImportError: /home/raulcd/import/math.so: file too short
+>>> spec = finder.find_spec('math')
+>>> spec
+ModuleSpec(name='math', loader=<_frozen_importlib_external.SourceFileLoader object at 0x7f549e8df7f0>, origin='/home/raulcd/import/math.py')
+>>> spec.loader.load_module('math')
+<module 'math' from '/home/raulcd/import/math.py'>
+>>> spec.loader.load_module('math')
+<module 'math' from '/home/raulcd/import/math.py'>
+>>> math
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'math' is not defined
+>>> sys.modules['math'] = spec.loader.load_module('math')
+>>> math
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'math' is not defined
+>>> math = sys.modules['math']
+>>> math.
+math.__cached__         math.__format__(        math.__lt__(            math.__setattr__(
+math.__class__(         math.__ge__(            math.__name__           math.__sizeof__(
+math.__delattr__(       math.__getattribute__(  math.__ne__(            math.__spec__
+math.__dict__           math.__gt__(            math.__new__(           math.__str__(
+math.__dir__(           math.__hash__(          math.__package__        math.__subclasshook__(
+math.__doc__            math.__init__(          math.__reduce__(        math.my_method(
+math.__eq__(            math.__le__(            math.__reduce_ex__(     
+math.__file__           math.__loader__         math.__repr__(          
+>>> math.my_method()
+Yey my_method
+>>> 
+
